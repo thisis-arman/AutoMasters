@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div className='bg-[#E8E9F1]'>
+      <div className='bg-[#E8E9F1] px-4'>
 
         <HomePage />
       </div>
