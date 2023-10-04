@@ -4,16 +4,26 @@ import CarCards from "./CarCards";
 
 const Header = () => {
 
+
     const [cars, setCars] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
     const itemsPerPage = 6;
     const [currentPage, setCurrentPage] = useState(1);
 
+
     useEffect(() => {
-        fetch('/public/car.json')
+        fetch('https://www.jsonkeeper.com/b/IDGI')
             .then(res => res.json())
             .then(data => setCars(data));
     }, []);
+
+    console.log(cars)
+
+    /*   useEffect(() => {
+          fetch('https://www.jsonkeeper.com/b/IDGI')
+              .then(res => res.json())
+              .then(data => console.log(data))
+      }, []) */
 
     const handleSearchChange = (e) => {
         setSearchQuery(e.target.value);
